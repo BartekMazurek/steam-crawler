@@ -1,0 +1,23 @@
+.game-row {
+  margin: 0 auto;
+  margin-top: 20px;
+  max-width: 900px;
+  background-color: #644d58;
+  -webkit-box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.8);
+  box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.8);
+  color: white;
+}
+
+.btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 0px;
+}
+
+p {
+  margin-top: 28px;
+}
+
+.modal-paragraph {
+  margin-top: 5px;
+}

@@ -1,0 +1,74 @@
+<div *ngIf="!processing">
+  <div *ngIf="games">
+    <div *ngIf="games.length > 0; else noData">
+      <div class="row game-row" *ngFor="let game of games">
+        <div class="col-5">
+          <p>{{ game.name }}</p>
+        </div>
+        <div class="col-5">
+          <p>STEAM_ID: {{ game.steamId }}</p>
+        </div>
+        <div class="col-2">
+          <button class="btn btn-success" (click)="open(content, game.name, game.steamId)">MORE DETAILS</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noData>
+    <div class="game-row">No results... Try again.</div>
+  </ng-template>
+
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">DETAILS: {{ gameName }} ({{ gameId }})</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-12">
+          <img src="https://steamcdn-a.akamaihd.net/steam/apps/{{gameId}}/header.jpg?t=1575026086">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p class="modal-paragraph">{{ gameName }} ({{ gameId }})</p>
+        </div>
+      </div>
+      <div *ngIf="!isLoadingPrice; else priceLoader" class="row">
+        <div class="col-12">
+            <table class="table table-bordered">
+              <thead>
+              <tr>
+                <th scope="col">Price</th>
+                <th scope="col">Discount</th>
+                <th scope="col">Discount Value (%)</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  {{ gamePrice }}
+                </td>
+                <td>
+                  {{ gameDiscount }}
+                </td>
+                <td>
+                  {{ gameDiscountValue }}
+                </td>
+              </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+      <ng-template #priceLoader>
+        Loading...
+      </ng-template>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Hide</button>
+    </div>
+  </ng-template>
+</div>

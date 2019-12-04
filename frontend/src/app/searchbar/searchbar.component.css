@@ -1,0 +1,38 @@
+form {
+  margin: 20px;
+  margin-right: 5px;
+  float: left;
+}
+
+input,
+input:focus,
+input:disabled {
+  width: 450px !important;
+  background-color: #92888d;
+  border: 1px solid #644d58;
+  border-radius: 0px;
+}
+
+.search-row {
+  margin: 0 auto;
+  margin-top: 20px;
+  max-width: 900px;
+  background-color: #644d58;
+  -webkit-box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.8);
+  box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.8);
+}
+
+.btn {
+  border-radius: 0px;
+  width: 110px;
+}
+
+.refresh-btn {
+  margin-top: 20px;
+  margin-left: -7px;
+}
+
+.clear-btn {
+  margin-top: 20px;
+  margin-left: 12px;
+}

@@ -1,0 +1,16 @@
+parameters:
+    env(MONGODB_URL): 'mongodb://localhost:27017'
+    env(MONGODB_DB): 'steamcrawler'
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '../src/*'
+        exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
+
+    App\Controller\:
+        resource: '../src/Controller'
+        tags: ['controller.service_arguments']

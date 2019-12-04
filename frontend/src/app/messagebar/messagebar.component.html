@@ -1,0 +1,20 @@
+<div class="row message-row" *ngIf="refreshStatus">
+  <div *ngIf="refreshStatus == 'success'" class="alert alert-success alert-dismissible fade show" role="alert">
+    Database has been updated.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div *ngIf="refreshStatus == 'cleared'" class="alert alert-success alert-dismissible fade show" role="alert">
+    Database has been cleared.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div *ngIf="refreshStatus == 'error'" class="alert alert-danger alert-dismissible fade show" role="alert">
+    An error has occured.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>

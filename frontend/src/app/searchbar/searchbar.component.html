@@ -1,0 +1,13 @@
+<div class="row search-row">
+  <div class="col-12">
+    <form (ngSubmit)="onSubmit(searchForm)" #searchForm="ngForm" class="form-inline">
+      <div class="form-group mx-lg-3 mb-2">
+        <label class="sr-only">Password</label>
+        <input type="text" class="form-control" placeholder="Type game name" name="searchString" [(ngModel)]="searchString" required>
+      </div>
+      <button type="submit" class="btn btn-info mb-2">Search</button>
+    </form>
+    <button class="btn btn-success mb-2 refresh-btn" (click)="refreshDatabase()">Fetch database</button>
+    <button class="btn btn-danger mb-2 clear-btn" (click)="clearDatabase()">Clear database</button>
+  </div>
+</div>

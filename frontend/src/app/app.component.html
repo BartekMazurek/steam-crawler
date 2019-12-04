@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <app-title></app-title>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <app-searchbar [refreshStatus]="refreshStatus" (refresh)="onRefresh($event)" (search)="onSearch($event)" (clear)="onClear($event)" (processing)="onProcessing($event)"></app-searchbar>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <app-messagebar [refreshStatus]="refreshStatus"></app-messagebar>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <app-loader [processing]="processing"></app-loader>
+    </div>
+  </div>
+</div>
+
+<div class="container gamelist-container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <app-gamelist [processing]="processing" [games]="games"></app-gamelist>
+    </div>
+  </div>
+</div>
+
+
