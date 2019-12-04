@@ -1,5 +1,5 @@
 # steamCrawler (Angular + Symfony Api + MongoDB)
-SteamCrawler is a simple application that allows you to download all Steam games (with steam_id) into local MongoDB database and check prices in realtime by calling SteamAPI.
+SteamCrawler is a simple application that allows you to download all steam_ids into local MongoDB database and check prices in realtime by calling SteamAPI.
 
 ![Stocks API image](http://bartekblog.prv.pl/steam_crawler/sc1.PNG)
 ![Stocks API image](http://bartekblog.prv.pl/steam_crawler/sc2.PNG)
